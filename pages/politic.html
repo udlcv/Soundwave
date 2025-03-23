@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - SoundWave</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
+      
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+
+    <link href="../css/styles.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a20;
+            color: #ffffff;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 1;
+        }
+        
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .privacy-header h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #ff6b6b, #feca57);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .legal-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 20px;
+        }
+        
+        .legal-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .legal-nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .legal-nav a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            font-weight: bold;
+        }
+        
+        .privacy-section {
+            margin-bottom: 50px;
+        }
+        
+        .privacy-section h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #feca57;
+        }
+        
+        .privacy-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #ff6b6b;
+        }
+        
+        .privacy-section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .wave-decoration {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+            overflow: hidden;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.3);
+            margin-top: 50px;
+        }
+        
+        .footer p {
+            opacity: 0.7;
+            font-size: 14px;
+        }
+        
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="../index.html">
+                <img id="logo-white" src="../assets/img/logo-white.png" alt="Soundwave" width="100" height="50"> 
+                <img id="logo-black" src="../assets/img/logo-black.png" alt="Soundwave" width="100" height="50" style="display: none;">                    
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="sign_up.html">Sign-up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="main-content">
+        <div class="privacy-header">
+            <h1>Política de Privacidad</h1>
+            <p>Protegiendo tus datos mientras disfrutas del sonido</p>
+        </div>
+        
+        <div class="legal-nav">
+            <a href="terms.html">Términos y Condiciones de Uso</a>
+            <a href="#" class="active">Política de Privacidad</a>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>1. Introducción</h2>
+            <p>En SoundWave, nos comprometemos a proteger tu privacidad y tus datos personales. Esta Política de Privacidad explica cómo recopilamos, utilizamos, divulgamos y protegemos tu información cuando utilizas nuestro sitio web y nuestros servicios. Por favor, lee atentamente esta política para entender nuestras prácticas con respecto a tus datos personales.</p>
+            
+            <p>Al acceder o utilizar SoundWave, aceptas las prácticas descritas en esta Política de Privacidad. Si no estás de acuerdo con esta política, por favor, no utilices nuestros servicios.</p>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>2. Información que Recopilamos</h2>
+            
+            <h3>Información que nos proporcionas</h3>
+            <p>Recopilamos la información que nos proporcionas directamente cuando utilizas nuestros servicios, que puede incluir:</p>
+            <ul>
+                <li>Información de registro: nombre, dirección de correo electrónico, nombre de usuario y contraseña.</li>
+                <li>Información de perfil: foto de perfil, biografía, ubicación y enlaces a perfiles en redes sociales.</li>
+                <li>Contenido que subes: pistas de audio, imágenes, comentarios y mensajes.</li>
+                <li>Información de pago: cuando realizas una compra o te suscribes a nuestros servicios premium.</li>
+                <li>Comunicaciones: cuando te comunicas con nosotros o con otros usuarios.</li>
+            </ul>
+            
+            <h3>Información recopilada automáticamente</h3>
+            <p>Cuando interactúas con nuestros servicios, recopilamos automáticamente cierta información, incluyendo:</p>
+            <ul>
+                <li>Información del dispositivo: tipo de dispositivo, sistema operativo, navegador web, dirección IP.</li>
+                <li>Datos de uso: páginas visitadas, tiempo de permanencia, acciones realizadas.</li>
+                <li>Datos de ubicación: ubicación geográfica general basada en tu dirección IP.</li>
+                <li>Cookies y tecnologías similares: utilizamos cookies y otras tecnologías para recopilar información sobre tu actividad y preferencias.</li>
+            </ul>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>3. Cómo Utilizamos Tu Información</h2>
+            <p>Utilizamos la información que recopilamos para:</p>
+            <ul>
+                <li>Proporcionar, mantener y mejorar nuestros servicios.</li>
+                <li>Personalizar tu experiencia y recomendarte contenido.</li>
+                <li>Procesar transacciones y gestionar tu cuenta.</li>
+                <li>Comunicarnos contigo sobre actualizaciones, promociones y eventos.</li>
+                <li>Analizar tendencias y comportamientos de los usuarios.</li>
+                <li>Proteger la seguridad y la integridad de nuestros servicios.</li>
+                <li>Cumplir con obligaciones legales y responder a solicitudes de las autoridades.</li>
+            </ul>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>4. Compartición de Información</h2>
+            <p>Podemos compartir tu información en las siguientes circunstancias:</p>
+            <ul>
+                <li>Con otros usuarios: el contenido que publicas públicamente es visible para todos los usuarios.</li>
+                <li>Con proveedores de servicios: empresas que realizan servicios en nuestro nombre (procesamiento de pagos, análisis de datos, servicio al cliente).</li>
+                <li>Con socios comerciales: para ofrecerte servicios o promociones conjuntas.</li>
+                <li>Por motivos legales: para cumplir con la ley, procesos legales o solicitudes gubernamentales.</li>
+                <li>En caso de transacción empresarial: en relación con una fusión, adquisición, venta de activos o reorganización empresarial.</li>
+                <li>Con tu consentimiento: compartiremos tu información cuando nos des tu consentimiento para hacerlo.</li>
+            </ul>
+            
+            <p>No vendemos tu información personal a terceros.</p>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>5. Tus Derechos y Opciones</h2>
+            <p>Tienes ciertos derechos y opciones con respecto a tu información:</p>
+            <ul>
+                <li>Acceso y actualización: puedes acceder y actualizar tu información a través de la configuración de tu cuenta.</li>
+                <li>Eliminación: puedes solicitar la eliminación de tu cuenta y datos personales.</li>
+                <li>Preferencias de comunicación: puedes optar por no recibir comunicaciones promocionales.</li>
+                <li>Cookies: puedes gestionar tus preferencias de cookies a través de la configuración de tu navegador.</li>
+                <li>Derechos de privacidad: dependiendo de tu ubicación, puedes tener derechos adicionales según las leyes locales (RGPD en Europa, CCPA en California, etc.).</li>
+            </ul>
+            
+            <p>Para ejercer cualquiera de estos derechos, puedes ponerte en contacto con nosotros a través de privacy@soundwave.com.</p>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>6. Seguridad de los Datos</h2>
+            <p>Implementamos medidas técnicas, administrativas y físicas para proteger tu información contra el acceso, la divulgación, la alteración y la destrucción no autorizados. Sin embargo, ningún método de transmisión o almacenamiento electrónico es 100% seguro, por lo que no podemos garantizar su seguridad absoluta.</p>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>7. Transferencias Internacionales de Datos</h2>
+            <p>SoundWave opera a nivel global, lo que significa que tu información puede ser transferida y procesada en países distintos al tuyo. Estos países pueden tener leyes de protección de datos diferentes a las de tu país. Al utilizar nuestros servicios, consientes a estas transferencias.</p>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>8. Menores de Edad</h2>
+            <p>Nuestros servicios no están dirigidos a menores de 13 años. No recopilamos intencionadamente información personal de niños menores de 13 años. Si eres padre o tutor y crees que tu hijo nos ha proporcionado información personal, por favor contáctanos para que podamos tomar las medidas necesarias.</p>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>9. Cambios a esta Política</h2>
+            <p>Podemos actualizar esta Política de Privacidad de vez en cuando. La versión actualizada se publicará en esta página con una fecha de "última actualización" revisada. Te recomendamos revisar periódicamente esta política para mantenerte informado sobre cómo protegemos tu información.</p>
+            
+            <p>Tu uso continuado de nuestros servicios después de la publicación de cambios constituye tu aceptación de dichos cambios.</p>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>10. Contacto</h2>
+            <p>Si tienes preguntas, comentarios o inquietudes sobre esta Política de Privacidad o nuestras prácticas de datos, por favor contáctanos a:</p>
+            <p>Email: privacy@soundwave.com</p>
+            <p>Dirección: Calle Ejemplo 123, Ciudad Ejemplo, 28001, España</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>© 2025 SoundWave. Todos los derechos reservados.</p>
+        <p>Donde el sonido encuentra significado.</p>
+    </div>
+    
+    <div class="wave-decoration">
+        <!-- Wave decoration would be rendered here -->
+    </div>
+</body>
+</html

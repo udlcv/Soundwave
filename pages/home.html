@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soundwave - Music App</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="../assets/logo.ico" />
+  <!-- Font Awesome icons -->
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/home.css">
+ </head>
+<body>
+  <div class="background-overlay"></div>
+  
+  <div class="page-container">
+    <div class="sidebar">
+      <div class="logo">
+        <img src="../assets/img/logo-white.png" alt="Soundwave Logo">
+      </div>
+      <a href="#" class="nav-link active" data-page="home"><i class="fas fa-home" > </i> <span> Inicio</span></a>
+      <a href="#" class="nav-link" data-page="playlists"><i class="fas fa-music" > </i> <span> Canciones</span></a>
+      <a href="#" class="nav-link" data-page="favorites"><i class="fas fa-heart" > </i> <span> Mis favoritos</span></a>
+      <a href="../index.html"><i class="fas fa-sign-out-alt"></i> <span> Cerrar sesión</span></a>
+      
+      <div class="slogan">
+        Donde el sonido encuentra significado
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="header">
+        <h1>Soundwave</h1>
+        <input type="text" class="search-bar" placeholder="Buscar canciones, artistas o álbumes...">
+      </div>
+      
+      <!-- Contenido de la página de Inicio -->
+      <div id="home-content" class="page-content active">
+        <div class="content-card new-release">
+          <h2 class="section-title">Nueva canción destacada</h2>
+          <video controls playsinline width="640" height="360" poster="../assets/img/featured-poster.jpg" autoplay muted>
+            <source src="../assets/video/Morat - Por Si No Te Vuelvo A Ver (Video Oficial).mp4" type="video/mp4">
+          </video>
+          <h2 class="section-title">Morat - Por Si No Te Vuelvo A Ver</h2>
+        </div>
+        
+        <div class="content-card">
+          <h2 class="section-title">Tendencias</h2>
+          <div class="trending-container">
+            <div class="album-item">
+              <button>
+                <a href="https://open.spotify.com/playlist/3YHOuQQuNrFPYuIHvZe5h1?si=li9wpDdYRCOnok-CIE7Hgg" target="_blank" rel="noopener noreferrer"><img src="../assets/img/2024.jpg" alt="Lo mejor de 2024" ></a>
+                </button>
+              <p>Lo mejor de 2024</p>
+            </div>
+            <div class="album-item">
+              <button>
+                <a href="https://open.spotify.com/playlist/37i9dQZF1EQnqst5TRi17F?si=kMXE3OiWRlqaY6jJPGE3PQ" target="_blank" rel="noopener noreferrer"><img src="../assets/img/hiphop.jpg" alt="Hip-Hop Hits"></a>
+              </button>
+              <p>Hip Hop Hits</p>
+            </div>
+            <div class="album-item">
+              <button>
+                <a href="https://open.spotify.com/intl-es/track/0FPlM3DFfGdQUsB9CAaYBM?si=6acc5452548c4212" target="_blank" rel="noopener noreferrer"><img src="../assets/img/vibessumer.jpg" alt="Vibes de Verano"></a>
+              </button>
+              <p>Vibes de Verano</p>
+            </div>
+            <div class="album-item">
+              <button>
+                <a href="https://open.spotify.com/intl-es/album/6wBRGhULLLdhU8vf9nprZI?si=pKDT0OWTRse9PoEYblu5XA" target="_blank" rel="noopener noreferrer"><img src="../assets/img/rock.jpg" alt="Rock Clásico"></a>
+              </button>
+              <p>Rock Clásico</p>
+            </div>
+            <div class="album-item">
+              <button>
+                <a href="https://open.spotify.com/playlist/37i9dQZF1EQmg9rwHdCwFW?si=IC9zBRcWRwiRpBJdrQsXqQ" target="_blank" rel="noopener noreferrer"></a><img src="../assets/img/reggaeton.jpg" alt="Mix de Reggaeton">
+              </button>
+              <p>Mix de Reggaeton</p>
+            </div>
+            <div class="album-item">
+              <button>
+                <a href="https://open.spotify.com/show/3a36uQneX1imRuopaknUqw?si=711545aebda94101" target="_blank" rel="noopener noreferrer"></a><img src="../assets/img/cotorrisa.jpg" alt="Podcast">
+              </button>
+              <p>La Cotorrisa</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="content-card">
+          <h2 class="section-title">Recomendado para ti</h2>
+          <div class="trending-container">
+            <div class="album-item">
+              <button>
+                <a href="https://open.spotify.com/playlist/37i9dQZF1FbGSHY3uJXdCR?si=UNU50ObDTkm674B99hPM9A&pi=xN4eEVvEQHO09" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/img/daylist.png" alt="Daylist">
+              </a>
+              </button>
+              <p>Tu dia en una playlist</p>
+            </div>
+            <div class="album-item">
+            
+              <button>
+                <a href="https://open.spotify.com/playlist/37i9dQZF1Epf24IZJjxQPj?si=RAV6y6pdRN2u5-PW9BUarw&pi=PCeExuKoSterj" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/img/repit.jpg" alt="En repeticion">
+              </a>
+              </button>
+              <p>Tus canciones favoritas <br> del momento</p>
+            </div>
+            <div class="album-item">
+              <button>
+                <a href="https://open.spotify.com/playlist/37i9dQZF1EfNZlc2AJiuxZ?si=xEFWMVx1SKa-vOWjt8kFZQ&pi=9Ws4w7SDS5GcH" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/img/rutina.jpg" alt="Rutina diaria">
+              </a>
+              </button>
+              <p>Un mix de noticias y musica, <br> hecho para ti</p>
+            </div>
+            <div class="album-item">
+              <button>
+                <a href="https://open.spotify.com/playlist/37i9dQZF1EpGaQiMIVxFzG?si=4Y09rQFLSzeRPOb_Z2ZBaA&pi=mYo4nT_fQMKc4" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/img/recuerda.jpg" alt="Recuerda y repite">
+              </a>
+              </button>
+              <p>Tus Canciones favoritas <br> del pasado</p>
+            </div>
+          </div>
+        </div>
+      </div>
+             
+        <!-- Reproductor rediseñado -->
+        <div id="playlists-content" class="content-section">
+          <h2>Todas las canciones</h2>
+          
+          <table class="canciones-table">
+              <thead>
+                  <tr>
+                      <th>Portada</th>
+                      <th>Título</th>
+                      <th>Artista</th>
+                      <th>Álbum</th>
+                      <th>Duración</th>
+                      <th>Acciones</th>
+                  </tr>
+              </thead>
+              <tbody id="canciones-list">
+                  <!-- Aquí se cargarán las canciones con AJAX -->
+              </tbody>
+          </table>
+          <script src="../js/search.js"></script>
+          <script src="../js/cargar_canciones.js"></script>
+          
+      </div>    
+      <!-- Contenido de la página de Favoritos -->
+      <div id="favorites-content" class="content-section">
+        <h2>Tus canciones favoritas</h2>
+        
+        <table class="canciones-table">
+            <thead>
+                <tr>
+                    <th>Portada</th>
+                    <th>Título</th>
+                    <th>Artista</th>
+                    <th>Álbum</th>
+                    <th>Duración</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="lista-canciones-favoritas">
+                <!-- Aquí se cargarán las canciones favoritas con AJAX -->
+            </tbody>
+        </table>
+      </div>
+      
+
+      <div id="reproductor-container" style="display: none;">
+        <div class="reproductor">
+            <div class="background-blur" id="reproductor-background"></div>
+            <div class="reproductor-content">
+                <div class="info-cancion">
+                    <img id="reproductor-portada" src="../assets/portadas/default-album.jpg" class="portada" alt="Portada del álbum">
+                    <div class="texto-info">
+                        <h2 id="reproductor-titulo"></h2>
+                        <h3 id="reproductor-artista"></h3>
+                    </div>
+                </div>
+                <div id="reproductor-audio-container"></div>
+            </div>
+        </div>
+      </div>
+      <script src="../js/cargar_canciones_favoritas.js"></script>
+      
+  <script src="../js/nav_pages.js"></script>
+</body>
+</html>

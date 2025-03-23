@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión - Soundwave</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../assets/logo.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+        <script src="../js/conexion,js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <style>
+        
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: #0a001f;
+            font-family: 'Arial', sans-serif;
+         
+        }
+        body::after {
+            content: '';
+            position: fixed; /* Fijo en la ventana del navegador */
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50vh; /* 50% de la altura de la ventana */
+            background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.7) 25%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+            z-index: 0; /* Detrás del contenido pero visible */
+            pointer-events: none; /* Permite interactuar con elementos debajo */
+        }
+        
+        .login-container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            /* overflow: hidden; */
+        }
+        
+        .wave-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('../assets/img/bg-masthead.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.5;
+            z-index: 0;
+        }
+        
+        .login-card {
+            background-color: rgba(15, 10, 38, 0.85);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            z-index: 1;
+            color: white;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 30px 0;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            max-height: 40px;
+            width: auto;
+        }
+        
+        .form-control {
+            background: rgba(30, 20, 60, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 12px;
+            height: auto;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            background: rgba(40, 30, 80, 0.9);
+            border-color: rgba(127, 90, 240, 0.6);
+            box-shadow: 0 0 15px rgba(127, 90, 240, 0.4);
+            color: white;
+        }
+        
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .btn-login {
+            background: linear-gradient(135deg, #6b45bc 0%, #9c6fef 100%);
+            border: none;
+            padding: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            margin-top: 5px;
+        }
+        
+        .btn-login:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(156, 111, 239, 0.4);
+        }
+        
+        .login-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .login-links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .login-links a:hover {
+            color: #9c6fef;
+        }
+        
+        .login-separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .login-separator::before,
+        .login-separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .login-separator::before {
+            margin-right: 10px;
+        }
+        
+        .login-separator::after {
+            margin-left: 10px;
+        }
+        
+        .social-login {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(30, 20, 60, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 18px;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-3px);
+            background: rgba(40, 30, 80, 0.9);
+        }
+        
+        .slogan {
+            text-align: center;
+            margin-top: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            font-family: Dancing Script;
+            font-size: 18px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .form-check-label {
+            font-size: 14px;
+        }
+        
+        .text-white-50 {
+            font-size: 14px;
+        }
+        
+        @media (max-width: 576px) {
+            .login-card {
+                padding: 20px;
+                margin: 20px;
+                max-height: 80vh;
+            }
+        }
+    </style>
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="../index.html">
+                <img id="logo-white" src="../assets/img/logo-white.png" alt="Soundwave" width="100" height="50"> 
+                <img id="logo-black" src="../assets/img/logo-black.png" alt="Soundwave" width="100" height="50" style="display: none;">                    
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead">
+    <div class="login-container">
+        <div class="wave-background"></div>
+        
+        <div class="login-card">
+            <div class="logo">
+                <img src="../assets/img/logo-white.png" alt="Soundwave Logo">
+            </div>
+            
+            <h3 class="text-center">Iniciar Sesión</h3>
+            
+            <form method="post" action="../php/login.php">
+                <div class="mb-3">
+                    <input type="email"  id="email" name="email" class="form-control" placeholder="Correo electrónico" required>
+                </div>
+                <div class="mb-3">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="remember">
+                        <label class="form-check-label" for="remember">Recordarme</label>
+                    </div>
+                    <a href="#" class="text-decoration-none text-white-50 hover-link">¿Olvidaste?</a>
+                </div>
+                <button type="submit" class="btn btn-login w-100">Entrar</button>
+            </form>
+            <!--
+            <div class="login-separator">o continúa con</div>
+            
+            <div class="social-login">
+                <a href="#" class="social-btn">f</a>
+                <a href="#" class="social-btn">G</a>
+               
+            </div>-->
+            
+            <div class="login-links">
+                <span class="text-white-50">¿No tienes una cuenta?</span>
+                <a href="sign_up.html" class="ms-2">Regístrate</a>
+            </div>
+            
+            <div class="slogan">
+                Donde el sonido encuentra significado
+            </div>
+        </div>
+    </div>
+</header>
+<script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '538032192247723',
+        xfbml      : true,
+        version    : 'v22.0'
+      });
+      FB.AppEvents.logPageView();
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jdk_facebook.js"></script>
+</body>
+</html>
