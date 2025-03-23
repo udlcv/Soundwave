@@ -1,3 +1,5 @@
+![logo-white](https://github.com/user-attachments/assets/c94550ec-4ad9-466f-af36-6fadf7779ae6)
+
 Soundwave
 Visión del Proyecto
 Soundwave nace como una alternativa superior a las plataformas de streaming actuales como Spotify, enfocándose en ofrecer una experiencia musical más completa con un diseño más atractivo, mejor calidad de sonido y mayor apoyo a artistas emergentes.
@@ -34,8 +36,12 @@ Posibilidad de comunicación directa con fans
 
 Eslogan
 "Donde el sonido encuentra significado"
+
 Estado del Proyecto
 Prototipo.
+
+
+
 Interfaz:
 ![image](https://github.com/user-attachments/assets/5dc8c171-b0af-4013-8964-04a1d8a87cc2)
 
