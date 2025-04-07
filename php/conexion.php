@@ -1,20 +1,18 @@
 <?php
-// Configuración de la base de datos
-$servername = "localhost"; // Cambia esto si no estás usando localhost
-$username = "root";  // Tu nombre de usuario de la base de datos
-$password = "";  // Tu contraseña de la base de datos
-$database = "soundwave";  // Nombre de tu base de datos
+$host = "ballast.proxy.rlwy.net"; // Ej: "monorail.proxy.rlwy.net"
+$port = 38591; // O el puerto que te dé Railway
+$database = "railway";
+$user = "root";
+$password = "uhsdmnOhOWgThimVsUwmUPoQIBmeJlBH";
 
 // Crear la conexión
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli($host, $user, $password, $database, $port);
 
-// Verificar la conexión
+// Verificar conexión
 if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
+    die("Conexión fallida: " . $conn->connect_error);
 }
-
-//echo "¡Conexión exitosa!";
-
-// Cierra la conexión al final si no la necesitas
-//$conn->close();
+/*
+echo "Conexión exitosa a la base de datos en Railway!";
+*/
 ?>
