@@ -265,6 +265,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Reactivar el botón
             btn.disabled = false;
             btn.style.opacity = "1";
+            location:reload();
         });
     }
     
