@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // Verifica que las contraseñas coincidan
         if ($password !== $confirm_password) {
-            echo "<script>alert('Las contraseñas no coinciden. Inténtalo de nuevo.'); window.location.href = '../pages/registro.html';</script>";
+            echo "<script>alert('Las contraseñas no coinciden. Inténtalo de nuevo.'); window.location.href = '../pages/sign_up.html';</script>";
             exit();
         }
 
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->store_result();
 
         if ($stmt->num_rows > 0) {
-            echo "<script>alert('Este correo ya está registrado. Usa otro.'); window.location.href = '../pages/registro.html';</script>";
+            echo "<script>alert('Este correo ya está registrado. Usa otro.'); window.location.href = '../pages/sign_up.html';</script>";
             exit();
         }
         $stmt->close();
