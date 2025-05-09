@@ -145,3 +145,6 @@ VALUES ('Un Sueño Y Nada Más', 'Grupo Polo Montañes', 'Un Sueño Y Nada Más'
 
 INSERT INTO canciones (titulo, artista, album, duracion, ruta, portada) 
 VALUES ('Hotel California (Live 1977)', 'Eagles', 'Hotel California', 405, 'Hotel.mp3', 'hotel.jpg');
+
+INSERT INTO canciones (titulo, artista, album, duracion, ruta, portada) 
+VALUES ('Viva la Vida', 'Coldplay', 'Viva la Vida or Death and All His Friends', 242, 'Viva.mp3', 'viva.jpeg');
