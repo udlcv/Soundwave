@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión - Soundwave</title>
+    <link rel="icon" type="image/x-icon" href="../assets/logo.ico" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        .main-container {
+            display: flex;
+            height: 100vh;
+        }
+        
+        .welcome-section {
+            flex: 1;
+            background-image: linear-gradient(rgba(0, 0, 0,1.5),rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.5)), url(../assets/img/log.jpg);
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        
+        .login-section {
+            flex: 1;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .login-form {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
+        
+        .welcome-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .welcome-text {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .form-control {
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+        }
+        
+        .btn-login {
+            background-color: #D4BE7F;
+            border: none;
+            padding: 10px;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .btn-login:hover {
+            background-color: #c5af6e;
+        }
+        
+        .login-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .forgot-link {
+            text-align: right;
+            display: block;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .register-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .form-check {
+            margin-bottom: 15px;
+        }
+        .main-container .welcome-section .logo {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-top: 20px;
+          }
+          .main-container .welcome-section .logo img {
+            max-height: 50px;
+            width: auto;
+          }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="welcome-section">
+            <div class="logo">
+                <img src="../assets/img/logo-white.png" alt="Soundwave Logo">
+              </div>
+            <div>
+                <h1 class="welcome-title">¡Bienvenido!</h1>
+                <p class="welcome-text">Accede a tu biblioteca musical personal, explora nuevos artistas y géneros, y disfruta de tu experiencia sonora sin interrupciones. ¡El ritmo te espera!</p>
+            </div>
+            <a href="../index.html" class="back-link">
+                <i class="bi bi-house-door me-2"></i> Regresar a menu principal
+            </a>
+        </div>
+        
+        <div class="login-section">
+            <div class="login-form">
+                <h2 class="login-title">Iniciar sesión</h2>
+                
+                <form method="post" action="../php/login.php">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="mb-3 position-relative">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required>
+                        <i class="toggle-password bi bi-eye-slash" onclick="togglePasswordVisibility()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="remember" name="remember">
+                        <label class="form-check-label" for="remember">
+                            Recuerdame el Usuario
+                        </label>
+                    </div>
+                    
+                    <a href="forgot_password.html" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                    
+                    <button type="submit" class="btn btn-login">Ingresar</button>
+                </form>
+                
+                <div class="register-link">
+                    <span>¿No tienes cuenta? </span>
+                    <a href="sign_up.html">Regístrate aquí</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById("password");
+            const toggleIcon = document.querySelector(".toggle-password");
+            
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleIcon.classList.remove("bi-eye-slash");
+                toggleIcon.classList.add("bi-eye");
+            } else {
+                passwordInput.type = "password";
+                toggleIcon.classList.remove("bi-eye");
+                toggleIcon.classList.add("bi-eye-slash");
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
