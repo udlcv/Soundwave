@@ -525,3 +525,40 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(reproductorContainer, { attributes: true });
   }
 });
+
+
+
+
+
+
+// Agregar esto a tu archivo JS principal
+document.addEventListener('DOMContentLoaded', function() {
+    // Detectar orientación y ajustar
+    window.addEventListener('orientationchange', function() {
+        // Reajustar elementos si es necesario
+        adjustLayoutForOrientation();
+    });
+    
+    // Prevenir zoom en inputs
+    document.addEventListener('touchmove', function(event) {
+        if (event.scale !== 1) { 
+            event.preventDefault(); 
+        }
+    }, false);
+    
+    // Mejorar scroll en mobile
+    if (window.innerWidth <= 768) {
+        document.body.style.overflowX = 'hidden';
+    }
+});
+
+function adjustLayoutForOrientation() {
+    const isLandscape = window.innerWidth > window.innerHeight;
+    const sidebar = document.querySelector('.sidebar');
+    
+    if (isLandscape && window.innerWidth <= 768) {
+        sidebar.style.height = '60px';
+    } else {
+        sidebar.style.height = 'auto';
+    }
+}
